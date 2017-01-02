@@ -51,10 +51,11 @@ function openNav() {
 function closeNav() {
     document.getElementById("NewPage").style.width = "0%";
 }
-function valueChanged()
-{
-    if($('label').is(":checked"))
-        $(".datebox").show();
-    else
-        $(".datebox").hide();
-}
+
+  var elem = document.getElementById('datebox');
+   checkBox = document.getElementById('datecheckbox');
+  checkBox.checked = false;
+  checkBox.onchange = function doruc() {
+      elem.style.display = this.checked ? 'block' : 'none';
+  };
+  checkBox.onchange();

@@ -19,7 +19,7 @@
         <ul class="todo" id="notdone">
             <li>
                 <div class="check">
-<button class="complete">
+                    <button class="complete">
                       <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <desc>Created with Sketch.</desc> <defs> <path class="fill" d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="path-1"></path> <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="35" height="35" fill="white"> <use xlink:href="#path-1"></use> </mask> </defs> <use id="icon-checkmark-unchecked" stroke="#A6C0D6" mask="url(#mask-2)" stroke-width="2" fill="none" xlink:href="#path-1"></use></svg>
 </button>
                 </div>
@@ -82,10 +82,6 @@
                             <div>
                     </li>
                     <ul>
-
-
-
-
     </section>
 
 
@@ -112,10 +108,13 @@
                         Due Date
                     </div>
                     <div class="checkbox">
-                        <input type='checkbox' class='ios8-switch ios8-switch-lg' id='checkbox-3' onchange="valueChanged()"><label for='checkbox-3'></label>
+                        <input type="checkbox" id="datecheckbox" class="datecheckbox" />
                     </div>
                 </div>
-                <div class="datebox">
+                <div class="datebox" id="datebox">
+                    <div class="content">Due By</div>
+                    <div class="datepick"><input type="datetime-local" class="datepicker" placeholder="date input"></div>
+
                 </div>
             </div>
         </section>
