@@ -1,0 +1,339 @@
+@@charset "UTF-8";
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #FAFBFD;
+    color: #618BAD;
+    font-weight: 500;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(178, 178, 178, 0.3);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(178, 178, 178, 0.3);
+    box-shadow: 0px 1px 2px 0px rgba(178, 178, 178, 0.3);
+}
+
+header .head {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -23.8px;
+    font-size: 17px;
+}
+
+header .new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+}
+
+header .new a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #618BAD;
+}
+
+.overlay header .closebtn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 18px;
+}
+
+.overlay header .closebtn a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.overlay header .save {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+}
+
+.overlay header .save button{
+    font-size: 18px;
+    text-decoration: none;
+    color: #618BAD;
+    background: none;
+    border: 0px;
+}
+
+.overlay header .head {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -43.6px;
+    font-size: 17px;
+}
+
+.overlay-content input {
+    width: 100%;
+    height: 56px;
+    border: 0px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #618BAD;
+    padding: 20px;
+}
+
+section .subhead {
+    width: 100%;
+    height: 28px;
+    background: #E7EFF6;
+    font-size: 14px;
+    color: #8EABC3;
+    font-weight: 400;
+    padding: 7px 0 0 14px;
+}
+
+ul.todo li {
+    width: 100%;
+    height: 90px;
+    background: #fff;
+}
+
+ul.todo li:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #E7EFF6;
+    position: absolute;
+}
+
+ul.todo li div.content {
+    color: #618BAD;
+    font-size: 18px;
+    font-weight: 500;
+    float: left;
+    position: relative;
+    top: 36px;
+    left: 30px;
+}
+
+ul.todo#done li div.content {
+    color: #618BAD;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    text-decoration: line-through;
+    float: left;
+    position: relative;
+    top: 36px;
+    left: 30px;
+}
+
+ul.todo li div.duedate {
+    color: #618BAD;
+    font-size: 14px;
+    font-weight: 300;
+    float: right;
+    position: relative;
+    top: 36px;
+    right: 10px;
+}
+
+ul.todo li div.check {
+    float: left;
+    width: 35px;
+    height: 35px;
+    padding: 30px 0 0 15px;
+    border: 0px;
+}
+
+ul.todo li div.check button{
+  background: none;
+  border: 0px;
+}
+
+ul.todo li div.check svg {
+    width: 35px;
+    height: 35px;
+    border: 0px;
+    outline: 0px;
+}
+
+ul.todo li div.check svg .fill {
+    fill: #fff;
+}
+
+ul.todo li div.check svg {
+    width: 35px;
+    height: 35px;
+    border: 0px;
+    outline: 0px;
+}
+
+ul.todo#done li div.check svg {
+    width: 35px;
+    height: 35px;
+    border: 0px;
+    outline: 0px;
+}
+
+ul.todo#done li div.check svg .fill {
+    fill: #618BAD;
+    border: 0px;
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #E7EFF6;
+    /* Black fallback color */
+    background-color: #E7EFF6;
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.2s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+input[type="checkbox"].ios8-switch {
+    position: absolute;
+    margin: 8px 0 0 16px;
+}
+
+input[type="checkbox"].ios8-switch+label {
+    position: relative;
+    padding: 5px 0 0 50px;
+    line-height: 2.0em;
+}
+
+input[type="checkbox"].ios8-switch+label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 40px;
+    /* x*5 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 24px;
+    /* x*3 */
+    height: 24px;
+    /* x*3 */
+    border-radius: 16px;
+    /* x*2 */
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].ios8-switch+label:hover:after {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch:checked+label:after {
+    margin-left: 16px;
+}
+
+input[type="checkbox"].ios8-switch:checked+label:before {
+    background: #A6C0D6;
+}
+
+input[type="checkbox"].ios8-switch-lg {
+    margin: 10px 0 0 20px;
+    display: none;
+}
+
+input[type="checkbox"].ios8-switch-lg+label {
+    position: relative;
+    padding: 7px 0 0 20px;
+    line-height: 2.3em;
+}
+
+input[type="checkbox"].ios8-switch-lg+label:before {
+    width: 50px;
+    /* x*5 */
+    height: 30px;
+    /* x*3 */
+    border-radius: 20px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-lg+label:after {
+    width: 30px;
+    /* x*3 */
+    height: 30px;
+    /* x*3 */
+    border-radius: 20px;
+    /* x*2 */
+}
+
+input[type="checkbox"].ios8-switch-lg+label:hover:after {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"].ios8-switch-lg:checked+label:after {
+    margin-left: 20px;
+    /* x*2 */
+}
+
+.duedates {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    margin-top: 30px;
+}
+.datebox {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+}
+
+.duedates .content {
+    color: #618BAD;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px;
+    float: left;
+}
+
+.duedates .checkbox {
+    position: relative;
+    top: 10px;
+    right: 50px;
+    float: right;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>To-Do List App</title>
+    <link style="text/css" rel="stylesheet" href="css/reset.min.css">
+    <link style="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="head">Todos</div>
+        <div class="new"><a href="javascript:void(0)" class="openbtn" onclick="openNav()">New</a></div>
+    </header>
+    <section>
+        <div class="subhead">Not Done</div>
+        <ul class="todo" id="notdone">
+            <li>
+                <div class="check">
+<button class="complete">
+                      <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <desc>Created with Sketch.</desc> <defs> <path class="fill" d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="path-1"></path> <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="35" height="35" fill="white"> <use xlink:href="#path-1"></use> </mask> </defs> <use id="icon-checkmark-unchecked" stroke="#A6C0D6" mask="url(#mask-2)" stroke-width="2" fill="none" xlink:href="#path-1"></use></svg>
+</button>
+                </div>
+                <div class="content">Payment Rent</div>
+                <div class="duedate">Due: Today @ 12:00</div>
+            </li>
+            <li>
+                <div class="check">
+                    <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <desc>Created with Sketch.</desc> <defs> <path class="fill" d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="path-1"></path> <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="35" height="35" fill="white"> <use xlink:href="#path-1"></use> </mask> </defs> <use id="icon-checkmark-unchecked" stroke="#A6C0D6" mask="url(#mask-2)" stroke-width="2" fill="none" xlink:href="#path-1"></use></svg>
+                </div>
+                <div class="content">Call Mom</div>
+                <div class="duedate">
+                    <div>
+            </li>
+            <ul>
+
+                <div class="subhead">Done</div>
+                <ul class="todo" id="done">
+                    <li>
+                        <div class="check">
+                            <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <path d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="icon-checkmark-checked" stroke="none" fill="#A6C0D6" fill-rule="evenodd"></path>
+                        </svg>
+                        </div>
+                        <div class="content">Book Flight to London</div>
+                        <div class="duedate">
+                            <div>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <path d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="icon-checkmark-checked" stroke="none" fill="#A6C0D6" fill-rule="evenodd"></path>
+                        </svg> </div>
+                        <div class="content">Work on Skillshare Class</div>
+                        <div class="duedate">
+                            <div>
+                    </li>
+                    <li>
+                        <div class="check">
+                            <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <path d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="icon-checkmark-checked" stroke="none" fill="#A6C0D6" fill-rule="evenodd"></path>
+                        </svg> </div>
+                        <div class="content">Make Haircut Appt.</div>
+                        <div class="duedate">
+                            <div>
+                    </li>
+                    <li>
+                        <div class="check">
+
+                            <svg width="35px" height="35px" viewBox="14 28 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs></defs>
+                            <path d="M30.6221357,51.1034891 C30.6387188,51.0889814 30.6549298,51.0738242 30.6707362,51.0580177 L39.226897,42.501857 C39.6070206,42.1217334 39.6084747,41.4832069 39.2155404,41.0902726 L38.5018405,40.3765726 C38.1056387,39.9803709 37.4769183,39.9785538 37.0902561,40.365216 L29.3804961,48.074976 L26.1758856,44.8703654 C25.787114,44.4815938 25.1520861,44.4836383 24.7591518,44.8765726 L24.0454519,45.5902726 C23.6492501,45.9864743 23.6497385,46.6175002 24.0392446,47.0070063 L28.6736684,51.64143 C29.0624399,52.0302016 29.6974678,52.0281571 30.0904021,51.6352228 L30.6221357,51.1034891 Z M31.5,63 C41.1649831,63 49,55.1649831 49,45.5 C49,35.8350169 41.1649831,28 31.5,28 C21.8350169,28 14,35.8350169 14,45.5 C14,55.1649831 21.8350169,63 31.5,63 Z" id="icon-checkmark-checked" stroke="none" fill="#A6C0D6" fill-rule="evenodd"></path>
+                        </svg>
+                        </div>
+                        <div class="content">Plan Date Night</div>
+                        <div class="duedate">
+                            <div>
+                    </li>
+                    <ul>
+
+
+
+
+    </section>
+
+
+    <div id="NewPage" class="overlay">
+        <header>
+            <div class="closebtn" id="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <svg width="34px" height="34px" viewBox="6 25 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="icon-close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(6.000000, 25.000000)">
+                      <path d="M18,16 L18,5 L16,5 L16,16 L5,16 L5,18 L16,18 L16,29 L18,29 L18,18 L29,18 L29,16 L18,16 Z" id="cross" fill="#618BAD" transform="translate(17.000000, 17.000000) rotate(-45.000000) translate(-17.000000, -17.000000) "></path>
+                  </g>
+              </svg>
+
+                </a>
+            </div>
+            <div class="head">New Todos</div>
+            <div class="save" id="overlay"><button id="add">Save</button></div>
+        </header>
+        <section>
+            <div class="overlay-content">
+                <input type="text" name="doit" id="item" placeholder="Todo Name" value="">
+                <div class="duedates">
+                    <div class="content">
+                        Due Date
+                    </div>
+                    <div class="checkbox">
+                        <input type='checkbox' class='ios8-switch ios8-switch-lg' id='checkbox-3' onchange="valueChanged()"><label for='checkbox-3'></label>
+                    </div>
+                </div>
+                <div class="datebox">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
